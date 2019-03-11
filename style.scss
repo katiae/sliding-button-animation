@@ -1,0 +1,106 @@
+//Font
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+//Colours
+$white: #fff;
+$blue: #32325d;
+$peach: #f794a4;
+$coral: #fdd6bd;
+
+// Mobile first
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+//General Html
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0; 
+}
+
+body{
+  padding: 1rem 0.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Raleway',Sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+}  
+
+//Container
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+}
+
+//Buttons
+.btn-group {
+  width: 340px;
+  height: 60px;
+  padding: 20px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15em;
+  line-height: 1.5em;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-one {
+  float: left;
+  line-height: 1.5em;
+  color: $white;
+  text-decoration: none;
+  transition: 0.8s;  
+}
+
+.btn-two {
+  float: right;
+  line-height: 1.5em;
+  height: 200px;
+  color: $blue;
+  text-decoration: none;
+}
+
+.btn-bg {
+  height: 60px;
+  width: 166px;
+  border-radius: 4px;
+  background: -webkit-linear-gradient(-45deg, #FFC796, #FF6B95 100%); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(-45deg, #FFC796, #FF6B95 100%);
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  top: 0;
+  position: absolute;
+  margin-left: -234px;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+span {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+span:hover + .btn-bg {
+  width: 144px;
+  margin-left: -40px;
+}
+
+.btn-two > span:hover {
+  color: $white;
+}
+
+.btn-two:hover ~ .btn-one {
+  color: $blue;
+}
+
+span {
+  height: 10px 0px;
+  transition: 0.8s;
+}
